@@ -2,15 +2,18 @@
 // EMAIL CONFIGURATION - EMAILJS
 // ============================================
 const EMAILJS_CONFIG = {
-    PUBLIC_KEY: 'YOUR_PUBLIC_KEY_HERE',
-    SERVICE_ID: 'YOUR_SERVICE_ID_HERE',
-    TEMPLATE_ID: 'YOUR_TEMPLATE_ID_HERE'
+    PUBLIC_KEY: 'tb7MbYKTO00W2hM9N', 
+    SERVICE_ID: 'service_gwx47gd',     
+    TEMPLATE_ID: 'template_f7tlubt'    
 };
 
 // Initialize EmailJS
-(function() {
-    if (typeof emailjs !== 'undefined' && EMAILJS_CONFIG.PUBLIC_KEY !== 'YOUR_PUBLIC_KEY_HERE') {
+(function () {
+    if (typeof emailjs !== 'undefined') {
         emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
+        console.log('EmailJS initialized');
+    } else {
+        console.error('EmailJS not loaded');
     }
 })();
 
